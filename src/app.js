@@ -26,6 +26,15 @@ window.onload = function() {
 
   let generateRandom = array => {
     let random = Math.floor(Math.random() * suits.length);
+    if (array[random] === "♥" || array[random] === "♦") {
+      imgTop.classList.add("text-danger");
+      imgButton.classList.add("text-danger");
+      numeros.classList.add("text-danger");
+    } else {
+      imgTop.classList.remove("text-danger");
+      imgButton.classList.remove("text-danger");
+      numeros.classList.remove("text-danger");
+    }
     return array[random];
   };
   let generarNumeros = generateRandom(numbers);
