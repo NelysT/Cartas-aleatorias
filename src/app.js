@@ -7,16 +7,15 @@ import "./assets/img/4geeks.ico";
 
 window.onload = function() {
   //write your code here
-  let numeros = document.getElementById("numeros");
-  let imgTop = document.getElementById("imgTop");
-  let imgButton = document.getElementById("imgButton");
+  let numeros = document.querySelector("p");
+  let card = document.querySelector(".card");
 
   let numbers = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "J", "Q", "K"];
   let suits = ["♦", "♥", "♠", "♣"];
 
   for (let i = 0; i < suits.lenght; i++) {
     if (suits[i] === "♥" || suits[i] === "♦") {
-      suits[i].style.color = red;
+      suits[i].style.color = "red";
       return suits[i];
     } else {
       return suits[i];
@@ -28,6 +27,5 @@ window.onload = function() {
     return array[random];
   };
   numeros.innerHTML = generateRandom(numbers);
-  imgTop.innerHTML = generateRandom(suits);
-  imgButton.innerHTML = generateRandom(suits);
+  card.innerHTML = generateRandom(suits);
 };
