@@ -33,5 +33,6 @@ window.onload = function() {
   numeros.innerHTML = generarNumeros;
   imgTop.innerHTML = generarSuits;
   imgButton.innerHTML = generarSuits;
+  //prueba 
   //btn.addEventListener("click", function); No se a quien tengo q llamar pq supongo q debe ejecutarse toda la funcion de onload
 };
