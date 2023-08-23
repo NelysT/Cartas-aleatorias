@@ -17,7 +17,7 @@ window.onload = function() {
   for (let i = 0; i < suits.lenght; i++) {
     if (suits[i] === "♥" || suits[i] === "♦") {
       suits[i].style.color = "red"; //tampoco se si se le da el color asi
-      //      return suits[i]; //entiendo q no estoy retornando esto a ningun sitio
+      return suits[i]; //entiendo q no estoy retornando esto a ningun sitio
     } else {
       return suits[i];
     }
@@ -27,8 +27,11 @@ window.onload = function() {
     let random = Math.floor(Math.random() * suits.length);
     return array[random];
   };
-  numeros.innerHTML = generateRandom(numbers);
-  imgTop.innerHTML = generateRandom(suits); //como los llamo por separado supongo q por eso son numeros distintos
-  imgButton.innerHTML = generateRandom(suits);
+  let generarNumeros = generateRandom(numbers);
+  let generarSuits = generateRandom(suits);
+
+  numeros.innerHTML = generarNumeros;
+  imgTop.innerHTML = generarSuits;
+  imgButton.innerHTML = generarSuits;
   //btn.addEventListener("click", function); No se a quien tengo q llamar pq supongo q debe ejecutarse toda la funcion de onload
 };
