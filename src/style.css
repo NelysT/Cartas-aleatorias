@@ -1,1 +1,16 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+body {
+  background: #0e7e12;
+}
+.rectangulo {
+  height: 350px;
+  width: 250px;
+  background: white;
+}
+p {
+  font-size: 80px;
+}
+.card {
+  font-size: 60px;
+  border: none;
+}
