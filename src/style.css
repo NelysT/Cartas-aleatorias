@@ -14,3 +14,6 @@ p {
   font-size: 60px;
   border: none;
 }
+#imgButton {
+  rotate: 180deg;
+}
