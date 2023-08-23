@@ -5,7 +5,7 @@ import "./style.css";
 import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
-window.onload = function() {
+window.onload = function generarCarta() {
   //write your code here
   let numeros = document.querySelector("p");
   let imgTop = document.querySelector("#imgTop"); //no se si hay q definir una variable para cada uno de los palos
@@ -44,5 +44,13 @@ window.onload = function() {
   imgTop.innerHTML = generarSuits;
   imgButton.innerHTML = generarSuits;
 
-  //btn.addEventListener("click", function); No se a quien tengo q llamar pq supongo q debe ejecutarse toda la funcion de onload pero la funcion se llama funcion, no tengo idea
+  //agregando el boton
+  let btn = document.getElementById("btn");
+  btn.addEventListener("click", generarCarta);
+  //agregar boton para el timer
+  let btnTimer = document.getElementById("btnTimer");
+  btnTimer.addEventListener("click", setTimeout); //como hago para q se ejecute solo cuando le den click y cuando
+se de   setTimeout(function() {
+    generarCarta();
+  }, 10000);
 };
