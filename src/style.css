@@ -6,6 +6,7 @@ body {
   height: 350px;
   width: 250px;
   background: white;
+  margin: 50px auto;
 }
 p {
   font-size: 80px;
